@@ -59,7 +59,7 @@ function updateAllFiles() {
 
 function createSrcFiles() {
     fs.mkdirSync('./src');
-    let ts = `export class DigilentProductDatabaseClient {
+    let ts = `export class ` + userInput.exportedModuleName + ` {
 
     constructor() {
         
