@@ -58,7 +58,12 @@ function updateAllFiles() {
 }
 
 function createSrcFiles() {
+    fs.mkdirSync('./src');
     let ts = `export class DigilentProductDatabaseClient {
+
+    constructor() {
+        
+    }
 
     }`;
 
@@ -80,6 +85,7 @@ getUserInput('organizationName', 'Please enter your company or organization name
     .then((exportedModuleName) => {
         console.log('Setting Up Your New Module');
         updateAllFiles();
+        createSrcFiles();
         process.exit();
     })
     .catch((err) => {
