@@ -5,6 +5,8 @@ let stdout = process.stdout;
 var userInput = {
     organizationName: '',
     moduleName: '',
+    exportedModuleName: '',
+    description: '',
 }
 
 var filesToUpdate = [
@@ -12,7 +14,7 @@ var filesToUpdate = [
     './tsconfig.json',
     './index.js',
     './index.d.ts',
-    './buildHelper.js',
+    './bundleHelper.js',
 ];
 
 function getUserInput(key, prompt) {
@@ -71,7 +73,11 @@ getUserInput('organizationName', 'Please enter your company or organization name
     })
     .then((moduleName) => {
         return getUserInput('exportedModuleName', 'Please enter the name you would like to export the module as (upper CamelCase): ');
-    }).then((exportedModuleName) => {
+    })
+    .then((description) => {
+        return getUserInput('description', 'Provide a short description of the module: ');
+    })
+    .then((exportedModuleName) => {
         console.log('Setting Up Your New Module');
         updateAllFiles();
         process.exit();

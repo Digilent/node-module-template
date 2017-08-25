@@ -1,7 +1,7 @@
 {
-  "name": "@<organizationName>/<moduleName>",
+  "name": "@digilent/test-module",
   "version": "0.0.0",
-  "description": "Digilent product database client",
+  "description": "<description>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,9 @@
     "clean": "rm -rf dist && rm -rf bundle",
     "copyCss": "cp -f src/*.css ./bundle && cp -f src/*.css ./dist",
     "ls": "ls -al ./src",
-    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/<moduleName>.js && npm run copyCss"
+    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/test-module.js && npm run copyCss"
   },
-  "author": "<organizationName>",
+  "author": "digilent",
   "license": "MIT",
   "devDependencies": {    
     "typescript": "2.0.10",

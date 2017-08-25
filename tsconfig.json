@@ -16,6 +16,6 @@
     "outDir": "./dist"
   },
   "files": [
-    "src/<moduleName>.ts"
+    "src/test-module.ts"
   ]
 }

@@ -1,1 +1,1 @@
-export * from './dist/<moduleName>';
+export * from './dist/test-module';

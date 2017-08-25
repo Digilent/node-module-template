@@ -1,2 +1,2 @@
-import { <moduleExportName> } from './dist/<modulename>';
-window.<moduleExportName> = <moduleExportName>;
+import { TestModule } from './dist/<modulename>';
+window.TestModule = TestModule;
