@@ -1,0 +1,1 @@
+exports.<exportedModuleName> = require('./dist/<moduleName>').<exportedModuleName>;

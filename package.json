@@ -1,0 +1,20 @@
+{
+  "name": "@<organizationName>/<moduleName>",
+  "version": "0.0.0",
+  "description": "Digilent product database client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build",
+    "clean": "rm -rf dist && rm -rf bundle",
+    "copyCss": "cp -f src/*.css ./bundle && cp -f src/*.css ./dist",
+    "ls": "ls -al ./src",
+    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/<moduleName>.js && npm run copyCss"
+  },
+  "author": "<organizationName>",
+  "license": "MIT",
+  "devDependencies": {    
+    "typescript": "2.0.10",
+    "webpack": "^3.5.3"
+  }
+}
