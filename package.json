@@ -1,5 +1,5 @@
 {
-  "name": "@digilent/test-module",
+  "name": "@<organizationName>/<moduleName>",
   "version": "0.0.0",
   "description": "<description>",
   "main": "index.js",
@@ -9,9 +9,9 @@
     "clean": "rm -rf dist && rm -rf bundle",
     "copyCss": "cp -f src/*.css ./bundle && cp -f src/*.css ./dist",
     "ls": "ls -al ./src",
-    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/test-module.js && npm run copyCss"
+    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/<moduleName>.js && npm run copyCss"
   },
-  "author": "digilent",
+  "author": "<organizationName>",
   "license": "MIT",
   "devDependencies": {    
     "typescript": "2.0.10",
