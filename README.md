@@ -1,8 +1,8 @@
 # Node Module Template
 
 1. Clone this repository.
-2. Run `npm install`
-3. Run `node setup.js` and follow the on screen instructions.
+2. Run `node setup.js` and follow the on screen instructions.
+3. Run `npm install` 
 4. Add source code in **src/**
 5. Run `node run build` to build the module.
 6. The browser module is built in **/bundle** and nodeJS module in **/dist**
