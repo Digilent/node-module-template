@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
+    "types": ["node"],
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
