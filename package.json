@@ -4,17 +4,20 @@
   "description": "<description>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine spec/core.js",
     "prepublish": "npm run build",
     "clean": "rm -rf dist && rm -rf bundle",
     "copyCss": "cp -f src/*.css ./bundle && cp -f src/*.css ./dist",
-    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/<moduleName>.js && npm run copyCss"
+    "docs": "typedoc --out ./docs ./src",
+    "build": "npm run clean && tsc && webpack bundleHelper.js ./bundle/<moduleName>.js && npm run copyCss && npm run docs"
   },
   "author": "<organizationName>",
   "license": "MIT",
   "devDependencies": {    
     "@types/node": "^7.0.12",
+    "jasmine-node": "^1.14.5",
     "typescript": "2.0.10",
+    "uglify-js": "^3.0.28",
     "webpack": "^3.5.3"
   }
 }
