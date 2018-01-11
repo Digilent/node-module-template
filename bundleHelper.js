@@ -1,2 +1,7 @@
 import { <exportedModuleName> } from './dist/<moduleName>';
-window.<exportedModuleName> = <exportedModuleName>;
+if (typeof window !== 'undefined') {
+    window.<exportedModuleName> = <exportedModuleName>;
+}
+else {
+    exports.<exportedModuleName> = <exportedModuleName>;
+}
